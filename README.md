@@ -66,7 +66,7 @@ Mutating tools (create deployment, set env var, delete env) are intentionally **
 
    ```bash
    export EMBR_TOKEN="<that token>"
-   export EMBR_API_URL="https://api.embr.azure/api"   # default; override for local API
+   export EMBR_API_URL="https://api.embr.azure"   # default; override for local API. Note: no /api suffix — Embr's Global API serves routes at root (/projects, /environments, …).
    ```
 
 4. Run
@@ -111,7 +111,7 @@ After deploy:
 ```bash
 embr config context -p prj_<id> -e env_<id>
 embr variables set EMBR_TOKEN=<token> --secret
-embr variables set EMBR_API_URL=https://api.embr.azure/api
+embr variables set EMBR_API_URL https://api.embr.azure
 ```
 
 Then the MCP endpoint is at `https://<deployment-url>/mcp/`.

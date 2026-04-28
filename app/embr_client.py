@@ -27,7 +27,7 @@ import httpx
 
 
 def get_api_url() -> str:
-    return os.environ.get("EMBR_API_URL", "https://api.embr.azure/api").rstrip("/")
+    return os.environ.get("EMBR_API_URL", "https://api.embr.azure").rstrip("/")
 
 
 def get_token() -> str:
